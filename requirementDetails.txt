@@ -1,0 +1,43 @@
+The application has to get build in MERN STACK,
+Th idea is to create a portal for students and techers, where students can post their uery by raising tickets and techer can answer to it.
+
+# Page flow:
+- when the app get's run Login page should get displayed
+- when user click on login button depend of user it should redirect to dashboard page
+- if teaher seperate dashboard (will have have list of queris to be answers in order else should display no queries till now, alos a logout button)
+- if student seperate dashboard (newTicket/newQuery on top left and logout on top right and the list of already created queries as list)
+
+# database in mongodb
+StudentDetails (Table name):
+-studentName = models.CharField('Student Name', max_length=30)
+-studentEmail = models.CharField('Email ID', max_length=40)
+-studentPassword = models.CharField('Password', max_length=14)
+-studentRegNo = models.CharField('Reg.no', max_length=9)
+-studentGender = models.CharField('Gender', max_length=6)
+
+TeacherDetails (Table name):
+-teacherName = models.CharField('Teacher Name', max_length=30)
+-teacherEmail = models.CharField('Email ID', max_length=40)
+-teacherPassword = models.CharField('Password', max_length=14)
+-teacherGender = models.CharField('Gender', max_length=6)
+
+QueryDetails (Table name):
+-studentIdInQuery = models.IntegerField('Student Id', default=0)
+-courseInQuery = models.CharField('Course Name', max_length=50)
+-courseCodeInQuery = models.CharField('Course Code', max_length=10)
+-slotInQuery = models.CharField('Slot', max_length=10)
+-topicInQuery = models.CharField('Topic', max_length=50)
+-doubtInQuery = models.TextField('Query')
+-feedbackInQuery = models.TextField('Reply',default='Not Replied...')
+-feedbackStatus = models.CharField('Feedback status', max_length=1, default='N')
+
+# Logic part:
+- crdentialCheck:
+    The login logic should check whether given gmail id is from student db or teacher db, and navigate to dahboadr accordingly
+
+- newTicket:
+    when user click on new ticket button, it should redirect to a new page where user can enter the details of the courseInQuery, courseCodeInQuery, slotInQuery, topicInQuery, doubtInQuery and submit it. The details should be stored in the QueryDetails table in the database with studentIdInQuery, feedbackInQuery and feedbackStatus added in it
+
+add the other logics accordingly
+
+tell eveything fromscratch the project name can be TicketRaise and node can be in Backend and react can be in FrontEnd

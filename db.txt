@@ -1,0 +1,33 @@
+//for staffs
+{
+"teacherName":"Purveen Ram",
+"teacherEmail":"purveenram@vitstaff.ac.in",
+"teacherPassword":"Pura@123",
+"teacherGender":"Male"
+}
+
+// for students
+{
+  "studentName": "Rupa Chandran",
+  "studentEmail": "rupachandran@vitstudent.ac.in",
+  "studentPassword": "Rupa@123",
+  "studentRegNo": " IT091",
+  "studentGender": "Male"
+}
+{
+  "studentName": "Gopal",
+  "studentEmail": "gopal@vitstaff.ac.in",
+  "studentPassword": "Gopal@123",
+  "studentRegNo": " IT128",
+  "studentGender": "Male"
+}
+// for query
+{
+  "studentId": "IT091",
+  "courseInQuery": "DSA",
+  "courseCodeInQuery": "DSA101",
+  "slotInQuery": "A1",
+  "topicInQuery": "Graph",
+  "doubtInQuery": "Can you explain Graph Logic?"
+}
+
